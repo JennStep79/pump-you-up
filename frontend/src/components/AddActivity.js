@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddActivity = {} => {
+const AddActivity = () => {
     return (
         <div>AddActivity</div>
     )

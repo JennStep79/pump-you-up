@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ActivityDetail = {} => {
+const ActivityDetail = () => {
     return (
         <div>ActivityDetail</div>
     )
