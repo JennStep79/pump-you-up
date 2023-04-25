@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ActivityList from './ActivityList';
-import ActivityDetail from './ActivityDetail';
-import AddActivity from './AddActivity';
-import SignUp from './SignUp';
-import Login from './Login';
-import NavBar from './NavBar';
+import ActivityList from '../src/components/ActivityList';
+import ActivityDetail from '../src/components/ActivityDetail';
+import AddActivity from '../src/components/AddActivity';
+import SignUp from '../src/components/SignUp';
+import Login from '../src/components/Login';
+import NavBar from '../src/components/NavBar';
 
 const App = () => {
   const [activities, setActivities] = useState([]);

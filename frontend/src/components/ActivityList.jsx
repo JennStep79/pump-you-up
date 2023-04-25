@@ -1,11 +1,11 @@
 import React from 'react';
-import ActivityDetails from './ActivityDetails';
+import ActivityDetail from './ActivityDetail';
 
 const ActivityList = ({ activities }) => {
   return (
     <div>
       {activities.map((activity) => (
-        <ActivityDetails key={activity.id} activity={activity} />
+        <ActivityDetail key={activity.id} activity={activity} />
       ))}
     </div>
   );
