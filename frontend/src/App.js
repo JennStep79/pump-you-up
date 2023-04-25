@@ -1,49 +1,57 @@
-import React, { useState } from 'react'
-import ActivityList from './components/ActivityList'
-import AddActivity from './components/AddActivity'
-import Login from './components/Login'
-import SignUp from './components/SignUp'
-import ActivityDetail from './components/ActivityDetail'
-
-
-// App.js
-
-
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ActivityList from './ActivityList';
+import ActivityDetail from './ActivityDetail';
+import AddActivity from './AddActivity';
+import SignUp from './SignUp';
+import Login from './Login';
+import NavBar from './NavBar';
 
+const App = () => {
+  const [activities, setActivities] = useState([]);
 
+  const handleAddActivity = (newActivity) => {
+    setActivities([...activities, newActivity]);
+  };
 
-function App() {
+  const handleSignUp = (user) => {
+    console.log(user);
+  };
+
+  const handleLogin = (user) => {
+    console.log(user);
+  };
+
   return (
     <Router>
       <div>
-        {/* <Navbar />
-        <div className="container"> */}
-          <Switch>
-            <Route exact path="/">
-              <h2>Welcome to Fitness Tracker App!</h2>
-            </Route>
-            <Route exact path="/activities">
-              <ActivityList />
-            </Route>
-            <Route path="/activities/:activityId">
-              <ActivityDetail />
-            </Route>
-            <Route path="/add-activity">
-              <AddActivity />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/signup">
-              <SignUp />
-            </Route>
-          </Switch>
-        </div>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+            <h1>Home Page</h1>
+          </Route>
+          <Route exact path="/activities">
+            <ActivityList activities={activities} />
+          </Route>
+          <Route exact path="/activities/:id">
+            <ActivityDetail activities={activities} />
+          </Route>
+          <Route exact path="/add-activity">
+            <AddActivity onAdd={handleAddActivity} />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp onSignUp={handleSignUp} />
+          </Route>
+          <Route exact path="/login">
+            <Login onLogin={handleLogin} />
+          </Route>
+          <Route>
+            <h1>404 - Not Found</h1>
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;
-
