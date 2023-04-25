@@ -1,0 +1,7 @@
+bcrypt
+Flask
+Flask-Cors
+psycopg2-binary
+SQLAlchemy
+supabase
+Flask-SQLAlchemy

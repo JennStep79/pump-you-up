@@ -23,3 +23,8 @@ const AddActivity = ({ onAddActivity }) => {
         <label>
           Title:
           <input type="text" value={title} onChange={(
+          )
+          }
+        }
+
+export default AddActivity

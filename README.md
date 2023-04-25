@@ -1,7 +1,7 @@
 # pump-you-up
 
 <p align="center"> 
-  <img src="src/assets/filename" alt="Pump-U-Up" width="500px" height="250px">
+  <img src="frontend/assets/logo.png" alt="Pump-U-Up" width="500px" height="250px">
 </p>
 
 # Overview
