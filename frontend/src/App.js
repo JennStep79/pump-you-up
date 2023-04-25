@@ -5,19 +5,13 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import ActivityDetail from './components/ActivityDetail'
 
-function App() {
 
 // App.js
 
-import React from 'react';
+
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Navbar from './components/Navbar';
-import ActivityList from './components/ActivityList';
-import ActivityDetails from './components/ActivityDetails';
-import AddActivity from './components/AddActivity';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
+
 
 function App() {
   return (
@@ -53,9 +47,3 @@ function App() {
 
 export default App;
 
-return (
-    <div className='App'>
-        <Login/>
-    </div>
-)
-}
