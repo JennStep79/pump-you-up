@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const ActivityDetail = () => {
-    return (
-        <div>ActivityDetail</div>
-    )
-}
+const ActivityDetails = ({ activity }) => {
+  return (
+    <div>
+      <h2>{activity.title}</h2>
+      <p>{activity.description}</p>
+      <p>{activity.duration}</p>
+      <p>{activity.date}</p>
+    </div>
+  );
+};
 
-export default ActivityDetail
+export default ActivityDetails;
