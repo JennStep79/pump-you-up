@@ -1,12 +1,14 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_cors import CORS
 
 db = SQLAlchemy()
 migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
     app.config.from_object('backend.config')
 
     db.init_app(app)
