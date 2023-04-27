@@ -1,4 +1,6 @@
 bcrypt
+flask_bcrypt
+flask_jwt_extended
 Flask
 Flask-Cors
 psycopg2-binary

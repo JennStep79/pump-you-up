@@ -1,12 +1,31 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // add code to handle login logic
+    const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+    });
+    const data = await response.json();
+    if (response.ok) {
+      // STORE THE JWT TOKEN IN LOCAL STORAGE
+      localStorage.setItem('token', data.token);
+      // REDIRECT TO THE PROTECTED ROUTE
+      history.push('/protected');
+    } else {
+      setError(data.message);
+    }
   };
 
   return (
