@@ -1,3 +1,3 @@
-from backend import create_app
+import backend
 
-app = create_app()
+app = backend.create_app()

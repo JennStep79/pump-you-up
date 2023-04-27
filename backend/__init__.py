@@ -19,5 +19,5 @@ def create_app():
 # db = SQLAlchemy(app)
 # migrate = Migrate(app, db)
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
