@@ -1,28 +1,29 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 const NavBar = () => {
-  return (
+    return (
     <nav>
-      <ul>
+        <ul>
         <li>
-          <NavLink exact to="/">Home</NavLink>
+            <Link to="/">Home</Link>
         </li>
         <li>
-          <NavLink exact to="/activities">Activities</NavLink>
+            <Link to="/activities">Activities</Link>
         </li>
         <li>
-          <NavLink exact to="/add-activity">Add Activity</NavLink>
+            <Link to="/add-activity">Add Activity</Link>
         </li>
         <li>
-          <NavLink exact to="/signup">Sign Up</NavLink>
+            <Link to="/signup">Sign Up</Link>
         </li>
         <li>
-          <NavLink exact to="/login">Login</NavLink>
+            <Link to="/login">Login</Link>
         </li>
-      </ul>
+        </ul>
     </nav>
-  );
+);
 };
 
 export default NavBar;
