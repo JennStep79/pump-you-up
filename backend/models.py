@@ -28,6 +28,8 @@ class User(db.Model):
             return None
 
 class Workout(db.Model):
+    __tablename__ = 'workouts'
+
     id = db.Column(db.Integer, primary_key=True)
     muscle_group = db.Column(db.String(50), nullable=True)
     weight_used = db.Column(db.Integer, nullable=True)
